@@ -10,5 +10,14 @@ def test_first():
     response = requests.post(url, json=data)
     print()
     pprint(response.json())
+    pprint(response.status_code)
+
+def test_get_users():
+    url = "https://send-request.me/api/users/2680"
+    response = requests.get(url)
+    print()
+    pprint(response.json())
+    pprint(response.status_code)
+
 
 
